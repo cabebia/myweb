@@ -1,0 +1,512 @@
+@import url("fonts.css");
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+/**
+ * ===================================================================
+ * 01. base style overrides 
+ *
+ * ------------------------------------------------------------------- 
+ */
+html{
+    font-size:10px;
+}
+body{
+    font-family: "lora-regular", serif;
+}
+
+
+/** 
+ * ===================================================================
+ * 02. typography & general theme styles 
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+h5{
+  color:#cc005f;
+}
+@media (min-width:1200px){
+  h5{
+    font-size:6.0rem !important;
+  }
+}
+
+h4{
+  font-size:1.2rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom:10px;
+}
+
+h2{
+  font-size:42px;
+}
+@media (min-width:900px){
+  h2{
+      font-size:10.0em;
+  }
+}
+
+h1{
+  font-family: "lora-regular", serif !important;
+  letter-spacing: 2px;
+  border-left:1px solid #fff;
+  border-right:1px solid #fff;
+}
+@media (min-width:1200px){
+  h1{
+    font-size: 2.0rem !important;
+    padding:0 30px;
+  }
+}
+
+h5, h2, h1{
+  text-align:center;
+}
+
+@media (max-width:768px){
+  p{
+      font-size:1.7rem;
+  }
+}
+
+@media (max-width:1200px){
+  p{
+      font-size:1.9rem;
+  }
+}
+@media (min-width:1200px){
+  p{
+    font-size:2.1rem;
+  }
+}
+
+/**
+ * 03. Lists 
+ * -------------------------------------------------------------------
+ */
+
+ul{
+    list-style: none;
+}
+
+/**
+ * 05. Div presentacion
+ * -------------------------------------------------------------------
+ */
+#presentacion{
+    margin: 180px 0 20px 0;
+}
+#presentacion h5{
+    margin-bottom: 8px;
+    font-size:1.5rem;
+}
+#presentacion h2{
+  margin:13px 0;
+}
+#presentacion h1{
+    margin-top:5px;
+    margin-bottom:6px;
+    font-size:1.2rem;
+}
+
+
+/**
+ * 07. Div languajes
+ * -------------------------------------------------------------------
+ */
+#languajes{
+    text-align: center;
+    font-family: "poppins-medium";
+    margin:30px 0;
+}
+#distinto{
+    font-family: "poppins-bold";
+    font-size:1.2rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+@media (min-width:770px){
+  #distinto{
+    margin-bottom: 50px;
+  }
+}
+#languajes ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#languajes ul li{
+    min-width: 92px;
+    margin: 0 10px 30px 0;
+}
+#languajes ul li p{
+  font-size: 1.1rem;
+  margin-bottom:8px;
+}
+@media (min-width:1200px){
+  #languajes ul li p{
+    font-size:1.8rem;
+    margin-bottom:15px;
+  }
+  #languajes ul li img{
+    width:5em;
+  }  
+}
+/**
+ * 08. Buttons
+ * -------------------------------------------------------------------
+ */
+a{
+    color: #fff !important;
+    text-decoration: none !important;
+    font-family: "poppins-bold";
+    font-size: 1.6rem;
+    letter-spacing:0.8rem;
+}
+
+button {
+    background: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: #fff;
+    margin:4px;
+    padding: 20px 0px;
+    font-size: 16px;
+    border-radius: 5px;
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease; 
+    cursor:pointer
+  }
+  
+  /*Animate-icon*/
+button.animate-icon{ 
+    padding: 10px 40px;  
+    overflow:hidden;
+  }
+button.animate-icon:before {
+    content:"\260E";
+    position: absolute;
+    top: 6px;
+    left: -30px;
+    transition: all 300ms ease;
+  }
+button.animate-icon:hover:before {
+    left: 12px;
+  }
+
+  /*Ghost*/
+button.ghost:hover{
+    color: #2B4C8C;
+    border: #2B4C8C solid 1px;
+    background:#fff;
+  }
+
+  /*fadeIn*/
+button.fade-in:hover{
+    opacity:0.5;
+  }
+  
+  /*Grow In*/
+  button.grow-in:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  /*Bounce*/
+  @keyframes bounce {
+    0%, 20%, 60%, 100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  
+    40% {
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    80% {
+      -webkit-transform: translateY(-10px);
+      transform: translateY(-10px);
+    }
+  }
+  button.bounce:hover {
+    animation: bounce 1s;
+  }
+
+  /*Skew*/
+  button.skew:hover {
+    transform: skew(-10deg);
+  }
+
+  /*Highlight Border*/
+  button.border {
+    border: 3px solid #2B4C8C;
+  }
+  button.border:hover {
+    border: 3px dotted #2B4C8C;
+    color: #2B4C8C;
+    background: #fff;
+  }
+
+  /*Flip 3D*/
+  button.flip {
+    transform-style: preserve-3d;
+    padding:10px
+  }
+  button.flip:after {
+    top: -100%;
+    left: 0px;
+    width: 100%;
+    position: absolute;
+    background: #2B4C8C;
+    border-radius: 5px;
+    padding:10px 0 10px 0;
+    content: 'Flipped';
+    transform-origin: left bottom;
+    transform: rotateX(90deg);  
+  }
+  button.flip:hover {
+    transform-origin: center bottom;
+    transform: rotateX(-90deg)      translateY(100%);
+  }
+  
+  /*shiny*/
+  @-webkit-keyframes shiny-btn {
+      0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
+      80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
+      81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
+      100% { -webkit-transform: scale(50) rotate(45deg); opacity: 0; }
+  }
+  button.shiny{
+    overflow: hidden;
+  }
+  button.shiny:before {
+      position: absolute;
+      content: '';
+      display: inline-block;
+      top: -180px;
+      left: 0;
+      width: 30px;
+      height: 100%;
+      background-color: #fff;
+      animation: shiny-btn 3s ease-in-out     infinite;
+  }
+  
+  /*border-hover*/
+  button.border-double:hover {
+    color: #2B4C8C;
+    background: transparent;
+     box-shadow:none;
+  }
+  button.border-double:before,
+  button.border-double:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #2B4C8C;
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #2B4C8C,
+     4px 4px 5px 0px #2B4C8C;
+    transition:400ms ease all;
+  }
+  button.border-double:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  button.border-double:hover:before,
+  button.border-double:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+
+/**
+ * 09. Section
+ * -------------------------------------------------------------------
+ */
+
+section{
+    color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:40px auto;
+}
+@media (min-width:770px){
+  section{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width:1200px){
+  section{
+    height:500px;
+  }
+}
+section #me{
+    text-align: center;
+    padding:20px 40px;
+    margin:40px 0;
+    letter-spacing:1.7px;
+}
+@media (min-width:770px){
+  section #me{
+    width: 47%;
+  }
+}
+@media (min-width:1200px){
+  section #me p{
+    margin-top:100px;
+  }
+}
+section #cv{
+  background-image: url("/img/320x/cv_span.png");
+  background-repeat: no-repeat;
+}
+@media (max-width:520px){
+  #cv{
+    max-width:320px;
+  }
+}
+@media (min-width:990px){
+  section #cv{
+    background-position: center;
+    width:50%;
+  }
+}
+@media (min-width:1200px){
+  section #cv{
+    margin-top:100px;
+  }
+}
+
+section #cv #blureffect{
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+section #cv #wish_contact{
+    padding:40px 10px;
+}
+@media (min-width:990px){
+  section #cv #wish_contact{
+    text-align: center;
+  }
+}
+section #cv #buttons{
+    display: flex;
+    padding-top:30px;
+    justify-content: center;
+}
+section #cv #buttons button{
+    width: 100%;
+    color: #fff !important;
+    background-color: rgba(36, 30, 30, 0.959);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3;
+}
+@media (min-width:990px){
+  section #cv #buttons button{
+    max-width: 226px;
+  }
+}
+
+/**
+ * 10. Header
+ * -------------------------------------------------------------------
+ */
+
+
+header{
+  background-image: url("/img/fondo.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  color:aliceblue;
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/**
+ * 11. Button see more
+ * -------------------------------------------------------------------
+ */
+ #see_more{
+   min-width: 280px;
+   max-width: 380px !important;
+   margin-bottom: 80px;
+ }
+
+/**
+ * 11. Translator
+ * -------------------------------------------------------------------
+ */
+#translator{
+  width: 100%;
+  height:100px;
+}
+@media (max-width:1420px){
+  #translator{
+    display: none;
+  }
+}
+/**
+ * 12. Footer
+ * -------------------------------------------------------------------
+ */
+
+footer{
+  box-sizing: border-box;
+  height:400px;
+  padding-top:30px;
+  background-color: rgba(19, 17, 17, 0.999);
+  text-align: center;
+}
+@media (max-width:720px){
+  footer{
+    padding-top:100px;
+  }
+}
+@media (min-width:720px){
+  footer{
+    padding-top: 80px;
+    height:320px;
+  }
+}
+footer h5{
+  font-size: 2rem;
+  margin-bottom:20px;
+}
+footer p{
+  margin:10px 0;
+  color:#fff;
+  line-height: 4rem;
+}
+#email{
+  font-style: italic;
+  letter-spacing:2px;
+}
+#thanks{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/**
+ * 13. SLide
+ * -------------------------------------------------------------------
+ */
+ .mySlides {display:none;}
